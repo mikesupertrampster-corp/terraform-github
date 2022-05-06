@@ -35,6 +35,10 @@ locals {
       tfe-management    = { topics = ["terraform", "module", "hashicorp", "terraform-registry", "terraform-cloud"], description = "Terraform modules for setting up TF Cloud" }
     }
 
+    terraform-provider = {
+      snyk = { topics = ["terraform", "provider", "hashicorp", "snyk"], is_template = true, description = "Terraform provider for configuring Snyk" }
+    }
+
     docker-builds = {
       simple-json-server = { topics = ["docker", "golang", "json", "http"], is_template = true, description = "Dynamically serves JSON from files" }
     }
@@ -46,7 +50,7 @@ locals {
     }
   }
 
-  prepend-category = ["terraform-module", "algo"]
+  prepend-category = ["algo", "terraform-module", "terraform-provider"]
 }
 
 module "repositories" {
