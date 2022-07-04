@@ -11,6 +11,7 @@ locals {
     standalone = {
       ".github"         = { topics = ["public"], description = "Public readme." }
       blockchain        = { topics = ["blockchain"], description = "Blockchain exercises." }
+      conftest          = { topics = ["conftest", "hcl2"], description = "OPA Conftest" }
       kubernetes-gitops = { topics = ["kubernetes", "gitops"], description = "Gitops repository for kubernetes" }
       gangway-kube-conf = { topics = ["golang", "k8s", "idp"], description = "Commandline to obtain kube-configuration via gangway" }
       nixos             = { topics = ["nixos", "nix", "linux", "os"], description = "NixOS and Home-Manager configurations" }
