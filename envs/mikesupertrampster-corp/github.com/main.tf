@@ -22,6 +22,11 @@ locals {
       web3              = { topics = ["web3"], description = "Playground for web3 development" }
     }
 
+    pulumi = {
+      azure-go = { topics = ["terraform", "github", "k8s", "hashicorp"], is_template = true, description = "IaC with Pulumi in Azure" }
+      aws-go   = { topics = ["terraform", "github", "k8s", "hashicorp"], is_template = true, description = "IaC with Pulumi in AWS" }
+    }
+
     terraform = {
       terraform           = { topics = ["terraform", "github", "k8s", "hashicorp"], is_template = true, description = "Terraform for Everything" }
       terraform-aws       = { topics = ["aws", "cloud", "iac", "terraform"], is_template = true, description = "AWS Setup via Terraform" }
@@ -52,7 +57,7 @@ locals {
     }
   }
 
-  prepend-category = ["algo", "terraform-module", "terraform-provider"]
+  prepend-category = ["algo", "terraform-module", "terraform-provider", "pulumi"]
 }
 
 module "repositories" {
